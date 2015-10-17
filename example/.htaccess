@@ -1,0 +1,3 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^(.*)\.mp3$ proxy.php?file=$1.mp3 [QSA]

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Create Google analytics event for each file download.
+ * Google analytics event should be created each time when file was downloaded.
  *
- * Return 404 error in case file does not exist.
+ * Return 404 error in case when file does not exist.
  * Stream the file and create Google analytics event otherwise.
  */
 
@@ -18,7 +18,7 @@ $fileName = $_GET["file"];
 
 $eventBuilder = EventBuilder::inctase(ACCOUNT_ID)->withCategory("My file")->withAction($fileName);
 
-// Check is file exist.
+// Check that file exists.
 if (!file_exists($fileName)) {
     // Create event
     $eventBuilder->withCategory("File not found")->createEvent();

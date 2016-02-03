@@ -21,15 +21,15 @@ RewriteRule ^(.*)\.mp3$ proxy.php?file=$1.mp3 [QSA]
 [Get raw .htaccess](https://raw.githubusercontent.com/banadiga/PHP-Server-Side-Google-Analytics/master/proxy-example/.htaccess)
 
 
-* Creation event when file is not exist and create other event when file streamed.
+* Event should be created when file was streamed or in case file was not found/not exists.
 
 ```php
 <?php
 
 /**
- * Create Google analytics event for each file download.
+ * Google analytics event should be created each time when file was downloaded.
  *
- * Return 404 error in case file does not exist.
+ * Return 404 error in case when file does not exist.
  * Stream the file and create Google analytics event otherwise.
  */
 
@@ -44,7 +44,7 @@ $fileName = $_GET["file"];
 
 $eventBuilder = EventBuilder::inctase(ACCOUNT_ID)->withCategory("My file")->withAction($fileName);
 
-// Check is file exist.
+// Check that file exists.
 if (!file_exists($fileName)) {
     // Create event
     $eventBuilder->withCategory("File not found")->createEvent();

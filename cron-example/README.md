@@ -29,4 +29,4 @@ register_shutdown_function('shutdown');
 // Do something...
 
 ```
-[Get raw cron.php](https://raw.githubusercontent.com//banadiga/PHP-Server-Side-Google-Analytics/master/cron-example/cron.php)
+[Get raw cron.php](https://raw.githubusercontent.com/banadiga/PHP-Server-Side-Google-Analytics/master/cron-example/cron.php)

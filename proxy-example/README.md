@@ -64,4 +64,4 @@ fpassthru(fopen($fileName, 'rb'));
 $eventBuilder->createEvent();
 
 ```
-[Get raw proxy.php]https://raw.githubusercontent.com/banadiga/PHP-Server-Side-Google-Analytics/master/proxy-example/proxy.php)
+[Get raw proxy.php](https://raw.githubusercontent.com/banadiga/PHP-Server-Side-Google-Analytics/master/proxy-example/proxy.php)
